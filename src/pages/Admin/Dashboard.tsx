@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { API_BASE_URL } from "@/lib/api";
 import { motion, AnimatePresence } from "framer-motion";
 import {
     Users,
@@ -74,7 +75,7 @@ const AdminDashboard = () => {
     const fetchSubmissions = async () => {
         try {
             const token = localStorage.getItem("adminToken");
-            const response = await fetch("http://localhost:5001/api/submissions", {
+            const response = await fetch(`${API_BASE_URL}/api/submissions`, {
                 headers: { Authorization: `Bearer ${token}` },
             });
             if (response.ok) {
@@ -92,7 +93,7 @@ const AdminDashboard = () => {
     const handleStatusUpdate = async (id: string, newStatus: string) => {
         try {
             const token = localStorage.getItem("adminToken");
-            const response = await fetch(`http://localhost:5001/api/submissions/${id}`, {
+            const response = await fetch(`${API_BASE_URL}/api/submissions/${id}`, {
                 method: 'PUT',
                 headers: {
                     'Content-Type': 'application/json',
@@ -121,7 +122,7 @@ const AdminDashboard = () => {
 
         try {
             const token = localStorage.getItem("adminToken");
-            const response = await fetch(`http://localhost:5001/api/submissions/${id}`, {
+            const response = await fetch(`${API_BASE_URL}/api/submissions/${id}`, {
                 method: 'DELETE',
                 headers: { Authorization: `Bearer ${token}` },
             });
@@ -143,7 +144,7 @@ const AdminDashboard = () => {
     const handleExport = async () => {
         try {
             const token = localStorage.getItem("adminToken");
-            const response = await fetch("http://localhost:5001/api/export", {
+            const response = await fetch(`${API_BASE_URL}/api/export`, {
                 headers: { Authorization: `Bearer ${token}` },
             });
             if (response.ok) {

@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { API_BASE_URL } from "@/lib/api";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
@@ -59,7 +60,7 @@ const Contact = () => {
     setIsSubmitting(true);
     try {
       // Submitting to backend on port 5001
-      const response = await fetch("http://localhost:5001/api/submit", {
+      const response = await fetch(`${API_BASE_URL}/api/submit`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
