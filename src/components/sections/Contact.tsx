@@ -60,14 +60,14 @@ const Contact = () => {
   const [phoneNumber, setPhoneNumber] = useState('');
 
   return (
-    <section className="section-padding bg-black relative overflow-hidden" id="contact">
+    <section className="section-padding bg-black relative overflow-x-hidden" id="contact">
       <div className="absolute inset-0 bg-grid opacity-10 pointer-events-none" />
       <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-blob opacity-5" />
 
-      <div className="container mx-auto px-6 relative z-10">
+      <div className="w-full max-w-7xl mx-auto px-5 md:px-6 relative z-10">
 
         {/* Header */}
-        <div className="text-left space-y-8 mb-20 md:mb-24 px-4 md:px-0">
+        <div className="flex flex-col items-center md:items-start text-center md:text-left space-y-8 mb-20 md:mb-24">
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -81,21 +81,21 @@ const Contact = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="fluid-h2 font-outfit font-black text-white leading-[0.9] tracking-tighter uppercase italic"
+            className="text-4xl sm:text-5xl md:text-8xl lg:text-9xl font-outfit font-black text-white leading-[0.9] tracking-tighter uppercase italic break-words w-full"
           >
             Bridge the <br />
             <span className="text-accent underline decoration-white/10 underline-offset-8 md:underline-offset-[12px]">& Collaborate.</span>
           </motion.h2>
-          <p className="text-base md:text-lg text-white/40 leading-relaxed font-medium italic max-w-2xl">
+          <p className="text-base md:text-lg text-white/40 leading-relaxed font-medium italic max-w-2xl mx-auto md:mx-0">
             Whether scaling or launching, we provide the technical firepower
             and strategic depth to command your industry prestige.
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-12 gap-10 md:gap-12 max-w-7xl mx-auto px-4 md:px-0">
+        <div className="grid lg:grid-cols-12 gap-8 md:gap-12 w-full mx-auto">
           {/* Inquiry Form */}
-          <div className="lg:col-span-7">
-            <div className="p-8 md:p-12 rounded-[2.5rem] bg-white/5 border border-white/5 shadow-2xl relative overflow-hidden group">
+          <div className="lg:col-span-7 min-w-0">
+            <div className="p-6 md:p-12 rounded-[2.5rem] bg-white/5 border border-white/5 shadow-2xl relative overflow-hidden group">
               <div className="absolute top-0 right-0 p-8 opacity-5 group-hover:opacity-10 transition-opacity">
                 <Send className="h-24 w-24 text-accent" />
               </div>
@@ -141,7 +141,7 @@ const Contact = () => {
           </div>
 
           {/* Sidebar */}
-          <div className="lg:col-span-5 space-y-8">
+          <div className="lg:col-span-5 space-y-8 min-w-0">
             <div className="grid gap-4">
               {contactDetails.map((detail) => {
                 // Determine the href based on the icon type
@@ -174,7 +174,7 @@ const Contact = () => {
                   <button
                     key={detail.label}
                     onClick={onClick}
-                    className="p-6 bg-white/5 border border-white/5 rounded-3xl flex items-center gap-6 transition-all hover:border-accent/40 group cursor-pointer w-full text-left"
+                    className="p-5 md:p-6 bg-white/5 border border-white/5 rounded-3xl flex items-center gap-6 transition-all hover:border-accent/40 group cursor-pointer w-full text-left"
                   >
                     {content}
                   </button>
@@ -182,14 +182,14 @@ const Contact = () => {
                   <a
                     key={detail.label}
                     href={href}
-                    className="p-6 bg-white/5 border border-white/5 rounded-3xl flex items-center gap-6 transition-all hover:border-accent/40 group cursor-pointer"
+                    className="p-5 md:p-6 bg-white/5 border border-white/5 rounded-3xl flex items-center gap-6 transition-all hover:border-accent/40 group cursor-pointer"
                   >
                     {content}
                   </a>
                 ) : (
                   <div
                     key={detail.label}
-                    className="p-6 bg-white/5 border border-white/5 rounded-3xl flex items-center gap-6 transition-all hover:border-accent/40 group"
+                    className="p-5 md:p-6 bg-white/5 border border-white/5 rounded-3xl flex items-center gap-6 transition-all hover:border-accent/40 group"
                   >
                     {content}
                   </div>
@@ -197,7 +197,7 @@ const Contact = () => {
               })}
             </div>
 
-            <div className="p-10 rounded-[2.5rem] bg-gradient-to-br from-white/10 to-black/20 border border-white/10 relative overflow-hidden group cursor-pointer shadow-2xl hover:shadow-[0_0_40px_rgba(212,255,51,0.15)] hover:border-accent/30 transition-all duration-500 hover:scale-[1.01]">
+            <div className="p-6 md:p-10 rounded-[2.5rem] bg-gradient-to-br from-white/10 to-black/20 border border-white/10 relative overflow-hidden group cursor-pointer shadow-2xl hover:shadow-[0_0_40px_rgba(212,255,51,0.15)] hover:border-accent/30 transition-all duration-500 hover:scale-[1.01]">
               <div className="absolute top-0 right-0 w-64 h-64 bg-accent/20 blur-[80px] rounded-full pointer-events-none group-hover:bg-accent/30 transition-all" />
 
               <div className="relative z-10 space-y-8">
@@ -224,7 +224,7 @@ const Contact = () => {
               </div>
             </div>
 
-            <div className="p-8 border border-white/5 rounded-3xl bg-white/5 flex items-center justify-between group cursor-pointer hover:border-accent/20 transition-all">
+            <div className="p-6 md:p-8 border border-white/5 rounded-3xl bg-white/5 flex items-center justify-between group cursor-pointer hover:border-accent/20 transition-all">
               <div className="flex items-center gap-4">
                 <div className="w-2 h-2 bg-accent rounded-full animate-ping" />
                 <div>
