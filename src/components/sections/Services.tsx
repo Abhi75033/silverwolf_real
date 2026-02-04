@@ -96,36 +96,46 @@ const Services = () => {
           </div>
 
           <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-10 md:gap-12 px-4 md:px-0">
-            <h2 className="fluid-h2 font-outfit font-black text-white leading-[1.1] md:leading-[0.9] tracking-tighter uppercase relative z-10">
-              <span className="flex items-center gap-3 md:gap-6 flex-wrap align-middle">
+            <h2 className="text-[1.75rem] sm:text-5xl md:text-7xl lg:text-8xl xl:text-9xl font-outfit font-black text-white leading-[1] md:leading-[0.9] tracking-tighter uppercase relative z-10 flex flex-col items-start gap-0 md:gap-2">
+              {/* Line 1: We [Image] Understand */}
+              <span className="flex items-center gap-1.5 md:gap-6 align-middle whitespace-nowrap">
                 We
-                <div className="hidden sm:inline-block h-[50px] w-[120px] lg:h-[80px] lg:w-[180px] rounded-full overflow-hidden border border-white/10 bg-zinc-900 group shadow-lg transition-transform hover:scale-105 duration-500 align-middle">
+                <div className="inline-block h-[24px] w-[60px] sm:h-[50px] sm:w-[120px] lg:h-[80px] lg:w-[180px] rounded-full overflow-hidden border border-white/10 bg-zinc-900 group shadow-lg transition-transform hover:scale-105 duration-500 align-middle">
                   <img
                     src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=2670&auto=format&fit=crop"
                     className="w-full h-full object-cover grayscale opacity-60 transition-opacity group-hover:opacity-100"
                     alt="Team Collaboration"
                   />
                 </div>
-                Understand <span className="text-white/20 italic">What</span>
+                Understand
               </span>
-              <span className="block italic mt-1 md:mt-2">
-                Your Business <span className="text-accent underline decoration-accent/30 underline-offset-[6px] md:underline-offset-[12px]">Needs</span>
-              </span>
-            </h2>
 
-            <div className="flex items-center pt-4 lg:pt-0">
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.98 }}
-                onClick={() => navigate('/contact')}
-                className="group w-full sm:w-auto flex items-center justify-center gap-4 bg-transparent border border-accent/20 hover:border-accent hover:bg-accent text-accent hover:text-black px-8 py-4 rounded-full font-black text-[10px] md:text-xs uppercase tracking-[0.2em] transition-all duration-300 shadow-[0_0_20px_rgba(212,255,51,0.1)] hover:shadow-[0_0_30px_rgba(212,255,51,0.4)] whitespace-nowrap backdrop-blur-sm"
-              >
-                Get a Call Back
-                <div className="bg-accent/10 group-hover:bg-black/10 rounded-full p-2 transition-colors">
-                  <ArrowRight className="h-4 w-4" />
-                </div>
-              </motion.button>
-            </div>
+              {/* Line 2: What */}
+              <span className="text-white/10 md:text-white/20 italic text-[3.8rem] sm:text-7xl md:text-9xl leading-[0.8] -mt-1 md:-mt-4">What</span>
+
+              {/* Line 3: Your Business */}
+              <span className="italic leading-[1] md:leading-[0.9]">Your Business</span>
+
+              {/* Line 4 + Button: Needs & Call Back */}
+              <div className="flex flex-row items-end justify-between w-full mt-1 md:mt-4">
+                <span className="text-accent underline decoration-accent/30 underline-offset-[6px] md:underline-offset-[12px] italic leading-[1] md:leading-[0.9]">
+                  Needs
+                </span>
+
+                <motion.button
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.98 }}
+                  onClick={() => navigate('/contact')}
+                  className="hidden md:flex group items-center justify-center gap-2 bg-accent hover:bg-white text-black px-4 py-2 rounded-full font-black text-[8px] md:text-xs uppercase tracking-[0.2em] transition-all duration-300 shadow-glow mb-1 md:mb-4 sm:mr-4 md:mr-0"
+                >
+                  <span className="hidden sm:inline">Get a Call Back</span>
+                  <span className="sm:hidden">Call Back</span>
+                  <div className="bg-black/10 rounded-full p-1 transition-colors">
+                    <ArrowRight className="h-2.5 w-2.5" />
+                  </div>
+                </motion.button>
+              </div>
+            </h2>
           </div>
         </div>
 
@@ -142,7 +152,9 @@ const Services = () => {
                 onMouseLeave={() => setHoveredIdx(null)}
                 className={cn(
                   "group relative flex flex-col justify-between py-10 md:py-12 px-8 md:px-12 border-r border-white/5 transition-all duration-700 ease-[cubic-bezier(0.23,1,0.32,1)] cursor-pointer overflow-hidden bg-black snap-start shrink-0",
-                  hoveredIdx === idx ? "w-[75vw] md:w-[550px] bg-zinc-950" : "w-[65vw] md:w-[300px] lg:w-[400px]"
+                  hoveredIdx === idx
+                    ? "w-[75vw] md:w-[550px] bg-zinc-950/50 border-accent/20 shadow-[0_0_30px_rgba(212,255,51,0.05)]"
+                    : "w-[65vw] md:w-[300px] lg:w-[400px] border-white/[0.03]"
                 )}
                 onClick={() => {
                   if (window.innerWidth < 768) {
@@ -166,7 +178,7 @@ const Services = () => {
 
                   <h3 className={cn(
                     "text-3xl md:text-3xl font-outfit font-black uppercase tracking-tighter transition-all duration-700 leading-[0.9] italic",
-                    hoveredIdx === idx ? "text-white text-4xl md:text-5xl" : "text-white/40 group-hover:text-white"
+                    hoveredIdx === idx ? "text-white text-4xl md:text-5xl" : "text-white/80 group-hover:text-white"
                   )}>
                     {service.title.split(' ').map((word, i) => (
                       <span key={i} className="block">{word}</span>

@@ -110,7 +110,7 @@ const Team = () => {
 
       <div className="container mx-auto px-6 relative z-10">
         {/* Header Section */}
-        <div className="text-center max-w-4xl mx-auto mb-4 md:mb-6 space-y-4">
+        <div className="text-center max-w-4xl mx-auto mb-8 md:mb-6 space-y-4">
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}

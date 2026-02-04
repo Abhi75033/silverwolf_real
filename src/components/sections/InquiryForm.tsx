@@ -3,7 +3,6 @@ import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
-import { motion } from "framer-motion";
 import { Check, ChevronsUpDown, MessageCircle, Mail } from "lucide-react";
 import { FaWhatsapp } from "react-icons/fa";
 
@@ -39,6 +38,8 @@ import {
 } from "@/components/ui/command";
 import { cn } from "@/lib/utils";
 import { useToast } from "@/components/ui/use-toast";
+import { CountrySelector } from "@/components/ui/CountrySelector";
+import { SuccessOverlay } from "@/components/ui/SuccessOverlay";
 
 const services = [
     { label: "GST & Tax Registration", value: "gst-registration" },
@@ -62,6 +63,10 @@ const formSchema = z.object({
     phone: z.string().min(10, {
         message: "Phone number must be at least 10 characters.",
     }),
+    country: z.string().min(1, {
+        message: "Please select a country.",
+    }),
+    countryCode: z.string().optional(),
     services: z.array(z.string()).refine((value) => value.length > 0, {
         message: "Please select at least one service.",
     }),
@@ -70,6 +75,8 @@ const formSchema = z.object({
 const InquiryForm = () => {
     const { toast } = useToast();
     const [open, setOpen] = useState(false);
+    const [showSuccess, setShowSuccess] = useState(false);
+    const [isSubmitting, setIsSubmitting] = useState(false);
 
     const form = useForm<z.infer<typeof formSchema>>({
         resolver: zodResolver(formSchema),
@@ -77,22 +84,50 @@ const InquiryForm = () => {
             name: "",
             email: "",
             phone: "",
+            country: "",
+            countryCode: "",
             services: [],
         },
     });
 
-    function onSubmit(values: z.infer<typeof formSchema>) {
-        console.log(values);
-        // Here you would typically send the data to your backend
-        toast({
-            title: "Inquiry Submitted!",
-            description: "We'll get back to you shortly.",
-        });
-        form.reset();
+    async function onSubmit(values: z.infer<typeof formSchema>) {
+        setIsSubmitting(true);
+        try {
+            const response = await fetch("http://localhost:5001/api/submit", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ ...values, type: "inquiry" }),
+            });
+
+            if (response.ok) {
+                setShowSuccess(true);
+                form.reset();
+            } else {
+                toast({
+                    title: "Submission Failed",
+                    description: "Please try again later.",
+                    variant: "destructive",
+                });
+            }
+        } catch (error) {
+            toast({
+                title: "Error",
+                description: "Unable to submit form. Please try again.",
+                variant: "destructive",
+            });
+        } finally {
+            setIsSubmitting(false);
+        }
     }
 
     return (
         <section className="py-12 md:py-20 px-4 md:px-8 bg-black relative overflow-hidden">
+            <SuccessOverlay
+                isOpen={showSuccess}
+                onClose={() => setShowSuccess(false)}
+                name={form.getValues().name}
+                type="inquiry"
+            />
             {/* Background Accents */}
             <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-accent/5 rounded-full blur-[120px] pointer-events-none" />
             <div className="absolute bottom-0 left-0 w-[300px] h-[300px] bg-blue-500/5 rounded-full blur-[100px] pointer-events-none" />
@@ -141,18 +176,43 @@ const InquiryForm = () => {
 
                                 <FormField
                                     control={form.control}
-                                    name="phone"
+                                    name="country"
                                     render={({ field }) => (
                                         <FormItem>
-                                            <FormLabel className="text-white/80 uppercase tracking-wider text-xs font-bold">Phone</FormLabel>
+                                            <FormLabel className="text-white/80 uppercase tracking-wider text-xs font-bold">Country</FormLabel>
                                             <FormControl>
-                                                <Input placeholder="(+91) 00000 00000" {...field} className="bg-black/50 border-white/10 text-white focus:border-accent focus:ring-accent/20 h-12" />
+                                                <CountrySelector
+                                                    value={field.value}
+                                                    onChange={(country) => {
+                                                        field.onChange(country.code);
+                                                        form.setValue("countryCode", country.dialCode);
+                                                    }}
+                                                />
                                             </FormControl>
                                             <FormMessage />
                                         </FormItem>
                                     )}
                                 />
                             </div>
+
+                            <FormField
+                                control={form.control}
+                                name="phone"
+                                render={({ field }) => (
+                                    <FormItem>
+                                        <FormLabel className="text-white/80 uppercase tracking-wider text-xs font-bold">Phone Number</FormLabel>
+                                        <div className="flex gap-2">
+                                            <div className="w-24 bg-black/50 border border-white/10 rounded-lg flex items-center justify-center text-white/60 text-sm font-mono p-2">
+                                                {form.watch("countryCode") || "+00"}
+                                            </div>
+                                            <FormControl>
+                                                <Input placeholder="0000000000" {...field} className="bg-black/50 border-white/10 text-white focus:border-accent focus:ring-accent/20 h-12 flex-1" />
+                                            </FormControl>
+                                        </div>
+                                        <FormMessage />
+                                    </FormItem>
+                                )}
+                            />
 
                             <FormField
                                 control={form.control}
@@ -230,13 +290,16 @@ const InquiryForm = () => {
                                 )}
                             />
 
-                            <Button type="submit" className="w-full bg-accent text-black hover:bg-accent/80 font-bold uppercase tracking-widest h-14 text-sm mt-4">
-                                Let's Talk
+                            <Button
+                                type="submit"
+                                disabled={isSubmitting}
+                                className="w-full bg-accent text-black hover:bg-accent/80 font-bold uppercase tracking-widest h-14 text-sm mt-4 shadow-lg hover:shadow-accent/40 transition-all"
+                            >
+                                {isSubmitting ? "Initiating Protocol..." : "Let's Talk"}
                             </Button>
                         </form>
                     </Form>
 
-                    {/* Contact Info in Form Section */}
                     {/* Contact Info in Form Section */}
                     <div className="mt-8 pt-8 border-t border-white/10 flex flex-col items-center gap-4 text-center">
                         <p className="text-white/60 text-sm">Need a quicker response?</p>

@@ -37,7 +37,7 @@ const SERVICES_DATA: Record<string, any> = {
         role: "Finance Expert & Tax Consultant",
         bio: "Specializing in income tax filing, GST registration, financial strategies, and comprehensive business compliance.",
         image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop",
-        mail: "rushabh@silverwolf.tech"
+        mail: "rushabh@silverwolftechnologies.in"
       }
     ],
     technologies: ["Financial Modeling", "QuickBooks", "SAP", "Advanced Excel"],
@@ -63,7 +63,7 @@ const SERVICES_DATA: Record<string, any> = {
         role: "Finance Expert & Tax Consultant",
         bio: "Specializing in income tax filing, GST registration, financial strategies, and comprehensive business compliance.",
         image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop",
-        mail: "rushabh@silverwolf.tech"
+        mail: "rushabh@silverwolftechnologies.in"
       }
     ],
     technologies: ["Tax Compliance Tools", "GST Portal Integration", "Legal Documentation"],
@@ -89,14 +89,14 @@ const SERVICES_DATA: Record<string, any> = {
         role: "Full Stack Website Developer",
         bio: "Expert in building high-performance web applications using modern JavaScript frameworks.",
         image: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=400&h=400&fit=crop",
-        mail: "sharad@silverwolf.tech"
+        mail: "sharad@silverwolftechnologies.in"
       },
       {
         name: "Divakar prajapati",
         role: "Lead Creative Designer",
         bio: "Expert in high-end visual design and brand storytelling.",
         image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=400&fit=crop",
-        mail: "diwakar@silverwolf.tech"
+        mail: "diwakar@silverwolftechnologies.in"
       },
       {
         name: "Abhishekh Yadav",
@@ -129,7 +129,7 @@ const SERVICES_DATA: Record<string, any> = {
         role: "Android Developer & Backend Engineer",
         bio: "Specializing in high-performance Android applications and Java-based backend systems using Spring Boot.",
         image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&h=400&fit=crop",
-        mail: "swapnali@silverwolf.tech"
+        mail: "swapnali@silverwolftechnologies.in"
       }
     ],
     technologies: ["Android SDK", "Java", "Spring Boot", "React Native", "Firebase"],
@@ -155,7 +155,7 @@ const SERVICES_DATA: Record<string, any> = {
         role: "Lead Creative Designer & Video Editor",
         bio: "Expert in high-end video editing and motion graphics for brand storytelling.",
         image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=400&fit=crop",
-        mail: "diwakar@silverwolf.tech"
+        mail: "diwakar@silverwolftechnologies.in"
       }
     ],
     technologies: ["Premiere Pro", "After Effects", "CapCut", "Davinci Resolve"],
@@ -181,7 +181,7 @@ const SERVICES_DATA: Record<string, any> = {
         role: "Lead Creative Designer & Video Editor",
         bio: "Expert in high-end visual design and brand storytelling.",
         image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=400&fit=crop",
-        mail: "diwakar@silverwolf.tech"
+        mail: "diwakar@silverwolftechnologies.in"
       }
     ],
     technologies: ["Photoshop", "Illustrator", "Figma", "Canva"],
@@ -207,14 +207,14 @@ const SERVICES_DATA: Record<string, any> = {
         role: "Android Developer & Backend Engineer",
         bio: "Specializing in high-performance Android applications and Java-based backend systems using Spring Boot.",
         image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&h=400&fit=crop",
-        mail: "swapnali@silverwolf.tech"
+        mail: "swapnali@silverwolftechnologies.in"
       },
       {
         name: "Sharad Yadav",
         role: "Full Stack Website Developer",
         bio: "Expert in building high-performance web applications using modern JavaScript frameworks.",
         image: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=400&h=400&fit=crop",
-        mail: "sharad@silverwolf.tech"
+        mail: "sharad@silverwolftechnologies.in"
       },
       {
         name: "Abhishekh Yadav",
@@ -254,7 +254,7 @@ const SERVICES_DATA: Record<string, any> = {
         role: "Backend System Engineer",
         bio: "Expert in database integration and complex query optimization for enterprise ERPs.",
         image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&h=400&fit=crop",
-        mail: "swapnali@silverwolf.tech"
+        mail: "swapnali@silverwolftechnologies.in"
       }
     ],
     technologies: ["PostgreSQL", "MongoDB", "Redis", "Elasticsearch", "AWS RDS"],
@@ -280,7 +280,7 @@ const SERVICES_DATA: Record<string, any> = {
         role: "Systems Stability Lead",
         bio: "Expert in deep-level debugging and performance optimization of large-scale JavaScript/TypeScript applications.",
         image: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=400&h=400&fit=crop",
-        mail: "sharad@silverwolf.tech"
+        mail: "sharad@silverwolftechnologies.in"
       },
       {
         name: "Abhishekh Yadav",

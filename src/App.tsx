@@ -14,6 +14,8 @@ import Team from "./pages/Team";
 import Contact from "./pages/Contact";
 import Inquiry from "./pages/Inquiry";
 import NotFound from "./pages/NotFound";
+import AdminLogin from "./pages/Admin/Login";
+import AdminDashboard from "./pages/Admin/Dashboard";
 import ScrollToTop from "./components/ScrollToTop";
 import { Loader } from "./components/ui/loader";
 import BottomNav from "./components/ui/BottomNav";
@@ -46,6 +48,8 @@ const App = () => {
                     <Route path="/team" element={<Team />} />
                     <Route path="/contact" element={<Contact />} />
                     <Route path="/inquiry" element={<Inquiry />} />
+                    <Route path="/admin" element={<AdminLogin />} />
+                    <Route path="/admin/dashboard" element={<AdminDashboard />} />
                     <Route path="*" element={<NotFound />} />
                   </Routes>
                 )}
