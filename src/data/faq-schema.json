@@ -1,0 +1,70 @@
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What services does Silver Wolf Technologies offer?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Silver Wolf Technologies offers comprehensive digital services including Web Development (React, Next.js), Mobile App Development (Android, iOS), GST & Tax Registration, Video Editing & Motion Graphics, Graphic Design & Branding, Custom CRM Solutions, Database Solutions, Website Bug Fixing & Maintenance, and Professional Finance Services including tax audits and wealth management."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How long does GST registration take with Silver Wolf Technologies?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "GST registration typically takes 7-14 business days with Silver Wolf Technologies. Our expert team, led by Rushabh Pandey, handles all documentation and compliance requirements to ensure a smooth and efficient registration process."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the typical timeline for web development projects?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Most web development projects are completed within 7-14 days for standard websites. Enterprise-grade applications may take longer depending on complexity. We follow rapid prototype-to-production cycles using modern technologies like React, Next.js, and Node.js to deliver high-performance websites quickly."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you provide mobile app development for both iOS and Android?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, we develop both native Android applications and cross-platform mobile apps that work on both iOS and Android. Our team specializes in enterprise ERP systems, FinTech solutions, e-commerce apps, and custom CRM mobile solutions using technologies like Android SDK, Java, Spring Boot, and React Native."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What areas does Silver Wolf Technologies serve?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Silver Wolf Technologies serves clients globally. While we are based in India, we provide digital services, web development, mobile app development, tax consulting, and creative services to businesses worldwide through remote collaboration and digital delivery."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Who are the key team members at Silver Wolf Technologies?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Our leadership team includes: Rushabh Pandey (Strategic Finance Lead & Tax Consultant), Divakar Prajapati (Lead Creative Director for Design & Video), Sharad Yadav (Chief Technology Officer for Web Development), Swapnali More (Lead Systems Engineer for Mobile & Backend), and Abhishek Kumar (Lead Web Developer & Cloud Engineer)."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What technologies do you use for web development?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We use cutting-edge technologies including React.js, Next.js, Node.js, TypeScript, Tailwind CSS for frontend development, and PostgreSQL, MongoDB, Redis for database solutions. For mobile development, we use Android SDK, Java, Spring Boot, and React Native. All our solutions are optimized for performance, security, and scalability."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you offer ongoing website maintenance and support?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, we provide comprehensive website maintenance and support services including emergency bug fixes, security audits and patches, performance optimization, 24/7 uptime monitoring, code refactoring, and scalability improvements. Our team ensures your digital assets remain stable, secure, and high-performing."
+      }
+    }
+  ]
+}
