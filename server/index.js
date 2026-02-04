@@ -14,7 +14,14 @@ connectDB();
 // Middleware
 app.use(express.json());
 app.use(cors({
-    origin: ['http://localhost:8080', 'http://localhost:8081', 'http://localhost:3000'],
+    origin: [
+        'http://localhost:8080',
+        'http://localhost:8081',
+        'http://localhost:3000',
+        'http://localhost:5173',
+        'https://www.silverwolftechnologies.in',
+        'https://silverwolftechnologies.in'
+    ],
     credentials: true,
     methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
     allowedHeaders: ['Content-Type', 'Authorization']

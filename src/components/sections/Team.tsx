@@ -143,7 +143,7 @@ const Team = () => {
             </div>
           </div>
 
-          <div className="relative h-[600px] md:h-[700px] min-w-[1400px] md:w-full mt-4 md:mt-8">
+          <div className="relative h-[600px] md:h-[700px] min-w-[1400px] md:w-full mt-20 md:mt-8">
             {team.map((member, idx) => (
               <div key={member.name} className={cn("absolute", member.pos, member.y)}>
                 {/* Member Label */}
