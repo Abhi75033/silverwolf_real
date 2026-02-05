@@ -457,7 +457,7 @@ Please provide a concise, step-by-step learning path (5-7 steps) for a junior de
       <div className="absolute inset-0 bg-grid opacity-10 pointer-events-none" />
       <div className="absolute top-0 right-1/4 w-96 h-96 bg-accent opacity-5 blur-[120px] rounded-full pointer-events-none" />
 
-      <div className="container mx-auto px-4 relative z-10">
+      <div className="container mx-auto px-2 md:px-4 relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}

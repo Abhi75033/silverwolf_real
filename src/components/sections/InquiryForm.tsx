@@ -122,7 +122,7 @@ const InquiryForm = () => {
     }
 
     return (
-        <section className="py-12 md:py-20 px-4 md:px-8 bg-black relative overflow-hidden">
+        <section className="py-12 md:py-20 px-1 md:px-8 bg-black relative overflow-hidden">
             <SuccessOverlay
                 isOpen={showSuccess}
                 onClose={() => setShowSuccess(false)}
@@ -133,7 +133,7 @@ const InquiryForm = () => {
             <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-accent/5 rounded-full blur-[120px] pointer-events-none" />
             <div className="absolute bottom-0 left-0 w-[300px] h-[300px] bg-blue-500/5 rounded-full blur-[100px] pointer-events-none" />
 
-            <div className="container mx-auto max-w-2xl relative z-10">
+            <div className="container px-0 md:px-4 mx-auto max-w-2xl relative z-10">
                 <div className="mb-12 text-center">
                     <h2 className="text-4xl md:text-5xl font-black font-outfit text-white mb-4 tracking-tighter uppercase italic">
                         Architect The <span className="text-accent text-glow">Future</span>
@@ -143,7 +143,7 @@ const InquiryForm = () => {
                     </p>
                 </div>
 
-                <div className="bg-zinc-900/50 backdrop-blur-xl border border-white/10 p-5 md:p-10 rounded-2xl shadow-2xl">
+                <div className="bg-zinc-900/50 backdrop-blur-xl border border-white/10 p-4 md:p-10 rounded-2xl shadow-2xl">
                     <Form {...form}>
                         <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
                             <FormField
@@ -203,11 +203,11 @@ const InquiryForm = () => {
                                     <FormItem>
                                         <FormLabel className="text-white/80 uppercase tracking-wider text-xs font-bold">Phone Number</FormLabel>
                                         <div className="flex gap-2">
-                                            <div className="w-24 bg-black/50 border border-white/10 rounded-lg flex items-center justify-center text-white/60 text-sm font-mono p-2">
+                                            <div className="w-20 md:w-24 bg-black/50 border border-white/10 rounded-lg flex items-center justify-center text-white/60 text-xs md:text-sm font-mono p-1 md:p-2">
                                                 {form.watch("countryCode") || "+00"}
                                             </div>
                                             <FormControl>
-                                                <Input placeholder="0000000000" {...field} className="bg-black/50 border-white/10 text-white focus:border-accent focus:ring-accent/20 h-12 flex-1" />
+                                                <Input placeholder="0000000000" {...field} className="bg-black/50 border-white/10 text-white focus:border-accent focus:ring-accent/20 h-12 flex-1 px-3 md:px-4" />
                                             </FormControl>
                                         </div>
                                         <FormMessage />
