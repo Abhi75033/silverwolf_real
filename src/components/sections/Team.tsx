@@ -49,7 +49,7 @@ const team = [
   {
     name: "Aditya Raj",
     role: "Python & AI Developer",
-    image: "https://res.cloudinary.com/abhisek-aur-backend/image/upload/v1770263087/Untitled_2_mfem8s.png",
+    image: "https://res.cloudinary.com/abhisek-aur-backend/image/upload/v1770264795/ChatGPT_Image_Feb_5_2026_09_41_03_AM_wkhakb.png",
     pos: "left-[65%]",
     y: "top-[12%]",
     arrow: "M0 0 C 0 40, -40 60, -40 120",
@@ -155,19 +155,15 @@ const Team = () => {
 
           <div className="relative h-[600px] md:h-[700px] min-w-[1240px] xl:min-w-full mt-20 md:mt-8">
             {team.map((member, idx) => (
-              <div
-                key={member.name}
-                className={cn("absolute", member.pos, member.y)}
-                style={{ zIndex: 50 - idx }} // High Z-Index for earlier members to prevent later ones from clipping their labels
-              >
+              <div key={member.name} className={cn("absolute", member.pos, member.y)}>
                 {/* Member Identity Layer (Labels & Arrows) */}
-                <div className="absolute left-1/2 -translate-x-1/2 -top-24 whitespace-nowrap">
+                <div className={cn("absolute whitespace-nowrap", idx % 2 === 0 ? "-top-20 -left-10" : "-top-24 -left-12")}>
                   {/* Visual Arrow Layer (Background) */}
                   <div className="absolute inset-0 z-0 pointer-events-none">
                     <CurvedArrow
                       path={member.arrow}
                       className={cn(
-                        "top-full mt-2 opacity-10",
+                        "top-full mt-2 opacity-20",
                         idx === 0 && "rotate-[10deg]",
                         idx === 1 && "rotate-[-20deg] scale-x-[-1]",
                         idx === 3 && "rotate-[15deg] h-40",
@@ -179,13 +175,13 @@ const Team = () => {
 
                   {/* Label Layer (Foreground) */}
                   <motion.div
-                    initial={{ opacity: 0, scale: 0.95 }}
-                    whileInView={{ opacity: 1, scale: 1 }}
+                    initial={{ opacity: 0, x: -10 }}
+                    whileInView={{ opacity: 1, x: 0 }}
                     className="relative z-20"
                   >
-                    <div className="bg-white/5 backdrop-blur-xl border border-white/10 p-3 md:p-4 rounded-2xl shadow-2xl hover:border-accent/30 transition-all group">
-                      <p className="text-accent font-black text-[10px] md:text-xs uppercase tracking-widest mb-1 group-hover:scale-105 transition-transform text-center">{member.name}</p>
-                      <p className="text-white/40 text-[8px] md:text-[9px] font-bold uppercase tracking-wider text-center">{member.role}</p>
+                    <div className="bg-white/5 backdrop-blur-md border border-white/10 p-4 rounded-2xl shadow-2xl hover:border-accent/30 transition-all group">
+                      <p className="text-accent font-black text-xs uppercase tracking-widest mb-1 group-hover:scale-105 transition-transform">{member.name}</p>
+                      <p className="text-white/40 text-[9px] font-bold uppercase tracking-wider">{member.role}</p>
                     </div>
                   </motion.div>
                 </div>
@@ -198,7 +194,7 @@ const Team = () => {
                   className="relative z-10 group"
                 >
                   {/* Figure Image */}
-                  <div className="relative w-[180px] md:w-[220px] aspect-[3/4] overflow-hidden rounded-b-[4rem] group-hover:scale-105 transition-transform duration-500">
+                  <div className="relative w-[210px] md:w-[260px] aspect-[3/4] overflow-hidden rounded-b-[4rem] group-hover:scale-105 transition-transform duration-500">
                     <img
                       src={member.image}
                       alt={member.name}
@@ -207,8 +203,8 @@ const Team = () => {
                   </div>
 
                   {/* Stool/Platform Base */}
-                  <div className="absolute bottom-4 left-1/2 -translate-x-1/2 w-32 h-12 bg-white/5 rounded-[50%] blur-xl opacity-50 group-hover:bg-accent/20 transition-all" />
-                  <div className="absolute bottom-6 left-1/2 -translate-x-1/2 w-24 h-2 bg-gradient-to-r from-transparent via-white/20 to-transparent rounded-full opacity-30" />
+                  <div className="absolute bottom-4 left-1/2 -translate-x-1/2 w-48 h-12 bg-white/5 rounded-[50%] blur-xl opacity-50 group-hover:bg-accent/20 transition-all" />
+                  <div className="absolute bottom-6 left-1/2 -translate-x-1/2 w-32 h-2 bg-gradient-to-r from-transparent via-white/20 to-transparent rounded-full opacity-30" />
                 </motion.div>
               </div>
             ))}
