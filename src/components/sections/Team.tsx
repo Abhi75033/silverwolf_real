@@ -156,36 +156,42 @@ const Team = () => {
           <div className="relative h-[600px] md:h-[700px] min-w-[1240px] xl:min-w-full mt-20 md:mt-8">
             {team.map((member, idx) => (
               <div key={member.name} className={cn("absolute", member.pos, member.y)}>
-                {/* Member Label */}
-                <motion.div
-                  initial={{ opacity: 0, x: -10 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  className={cn("absolute z-20 whitespace-nowrap", idx % 2 === 0 ? "-top-20 -left-10" : "-top-24 -left-12")}
-                >
-                  <div className="bg-white/5 backdrop-blur-md border border-white/10 p-4 rounded-2xl shadow-2xl hover:border-accent/30 transition-all group">
-                    <p className="text-accent font-black text-xs uppercase tracking-widest mb-1 group-hover:scale-105 transition-transform">{member.name}</p>
-                    <p className="text-white/40 text-[9px] font-bold uppercase tracking-wider">{member.role}</p>
+                {/* Member Identity Layer (Labels & Arrows) */}
+                <div className={cn("absolute whitespace-nowrap", idx % 2 === 0 ? "-top-20 -left-10" : "-top-24 -left-12")}>
+                  {/* Visual Arrow Layer (Background) */}
+                  <div className="absolute inset-0 z-0 pointer-events-none">
+                    <CurvedArrow
+                      path={member.arrow}
+                      className={cn(
+                        "top-full mt-2 opacity-20",
+                        idx === 0 && "rotate-[10deg]",
+                        idx === 1 && "rotate-[-20deg] scale-x-[-1]",
+                        idx === 3 && "rotate-[15deg] h-40",
+                        idx === 4 && "rotate-[-10deg] scale-x-[-1]",
+                        idx === 5 && "rotate-[5deg]"
+                      )}
+                    />
                   </div>
-                  {/* Visual Arrow */}
-                  <CurvedArrow
-                    path={member.arrow}
-                    className={cn(
-                      "top-full mt-2",
-                      idx === 0 && "rotate-[10deg]",
-                      idx === 1 && "rotate-[-20deg] scale-x-[-1]",
-                      idx === 3 && "rotate-[15deg] h-40",
-                      idx === 4 && "rotate-[-10deg] scale-x-[-1]",
-                      idx === 5 && "rotate-[5deg]"
-                    )}
-                  />
-                </motion.div>
+
+                  {/* Label Layer (Foreground) */}
+                  <motion.div
+                    initial={{ opacity: 0, x: -10 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    className="relative z-20"
+                  >
+                    <div className="bg-white/5 backdrop-blur-md border border-white/10 p-4 rounded-2xl shadow-2xl hover:border-accent/30 transition-all group">
+                      <p className="text-accent font-black text-xs uppercase tracking-widest mb-1 group-hover:scale-105 transition-transform">{member.name}</p>
+                      <p className="text-white/40 text-[9px] font-bold uppercase tracking-wider">{member.role}</p>
+                    </div>
+                  </motion.div>
+                </div>
 
                 {/* Member Figure */}
                 <motion.div
                   initial={{ opacity: 0, y: 50 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ delay: idx * 0.1, type: "spring", stiffness: 100 }}
-                  className="relative group"
+                  className="relative z-10 group"
                 >
                   {/* Figure Image */}
                   <div className="relative w-[210px] md:w-[260px] aspect-[3/4] overflow-hidden rounded-b-[4rem] group-hover:scale-105 transition-transform duration-500">
