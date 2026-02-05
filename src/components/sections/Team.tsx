@@ -14,7 +14,7 @@ const team = [
     name: "Rushabh Pandey",
     role: "Strategic Finance Lead",
     image: "https://res.cloudinary.com/abhisek-aur-backend/image/upload/v1770262434/WhatsApp_Image_2026-02-05_at_08.08.58_1_cxf5xf.jpg",
-    pos: "left-[0%]",
+    pos: "left-[5%]",
     y: "top-[15%]",
     arrow: "M10 0 C 10 30, 40 40, 40 100", // Custom SVG path
     labelPos: "left-[2%] top-[0%]"
@@ -23,7 +23,7 @@ const team = [
     name: "Divakar Prajapati",
     role: "Lead Creative Director",
     image: "https://res.cloudinary.com/abhisek-aur-backend/image/upload/v1770262435/WhatsApp_Image_2026-02-05_at_08.08.57_rlqpo8.jpg",
-    pos: "left-[16%]",
+    pos: "left-[20%]",
     y: "top-[28%]",
     arrow: "M80 0 C 80 50, 20 60, 20 120",
     labelPos: "left-[28%] top-[15%]"
@@ -32,7 +32,7 @@ const team = [
     name: "Sharad Yadav",
     role: "Chief Technology Officer",
     image: "https://res.cloudinary.com/abhisek-aur-backend/image/upload/v1762188813/Screenshot_2025-11-03_at_10.17.39_PM_f4ycpx.png",
-    pos: "left-[32%]",
+    pos: "left-[35%]",
     y: "top-[8%]",
     arrow: "M10 0 C 10 60, 40 80, 40 150",
     labelPos: "left-[42%] top-[-5%]"
@@ -41,7 +41,7 @@ const team = [
     name: "Swapnali More",
     role: "Lead Systems Engineer",
     image: "https://res.cloudinary.com/abhisek-aur-backend/image/upload/v1770262434/WhatsApp_Image_2026-02-05_at_08.08.58_ntkmv6.jpg",
-    pos: "left-[48%]",
+    pos: "left-[50%]",
     y: "top-[25%]",
     arrow: "M100 0 C 100 50, 40 60, 40 130",
     labelPos: "left-[68%] top-[5%]"
@@ -50,7 +50,7 @@ const team = [
     name: "Aditya Raj",
     role: "Python & AI Developer",
     image: "https://res.cloudinary.com/abhisek-aur-backend/image/upload/v1770263087/Untitled_2_mfem8s.png",
-    pos: "left-[64%]",
+    pos: "left-[65%]",
     y: "top-[12%]",
     arrow: "M0 0 C 0 40, -40 60, -40 120",
     labelPos: "left-[78%] top-[12%]"
