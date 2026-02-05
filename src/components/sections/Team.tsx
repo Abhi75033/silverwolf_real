@@ -13,48 +13,58 @@ const team = [
   {
     name: "Rushabh Pandey",
     role: "Strategic Finance Lead",
-    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&q=80",
-    pos: "left-[5%]",
-    y: "top-[10%]",
+    image: "https://res.cloudinary.com/abhisek-aur-backend/image/upload/v1770262434/WhatsApp_Image_2026-02-05_at_08.08.58_1_cxf5xf.jpg",
+    pos: "left-[0%]",
+    y: "top-[15%]",
     arrow: "M10 0 C 10 30, 40 40, 40 100", // Custom SVG path
     labelPos: "left-[2%] top-[0%]"
   },
   {
     name: "Divakar Prajapati",
     role: "Lead Creative Director",
-    image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=800&q=80",
-    pos: "left-[25%]",
-    y: "top-[25%]",
+    image: "https://res.cloudinary.com/abhisek-aur-backend/image/upload/v1770262435/WhatsApp_Image_2026-02-05_at_08.08.57_rlqpo8.jpg",
+    pos: "left-[16%]",
+    y: "top-[28%]",
     arrow: "M80 0 C 80 50, 20 60, 20 120",
     labelPos: "left-[28%] top-[15%]"
   },
   {
     name: "Sharad Yadav",
     role: "Chief Technology Officer",
-    image: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=800&q=80",
-    pos: "left-[45%]",
-    y: "top-[5%]",
+    image: "https://res.cloudinary.com/abhisek-aur-backend/image/upload/v1762188813/Screenshot_2025-11-03_at_10.17.39_PM_f4ycpx.png",
+    pos: "left-[32%]",
+    y: "top-[8%]",
     arrow: "M10 0 C 10 60, 40 80, 40 150",
     labelPos: "left-[42%] top-[-5%]"
   },
   {
     name: "Swapnali More",
     role: "Lead Systems Engineer",
-    image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=800&q=80",
-    pos: "left-[65%]",
-    y: "top-[15%]",
+    image: "https://res.cloudinary.com/abhisek-aur-backend/image/upload/v1770262434/WhatsApp_Image_2026-02-05_at_08.08.58_ntkmv6.jpg",
+    pos: "left-[48%]",
+    y: "top-[25%]",
     arrow: "M100 0 C 100 50, 40 60, 40 130",
     labelPos: "left-[68%] top-[5%]"
+  },
+  {
+    name: "Aditya Raj",
+    role: "Python & AI Developer",
+    image: "https://res.cloudinary.com/abhisek-aur-backend/image/upload/v1770263087/Untitled_2_mfem8s.png",
+    pos: "left-[64%]",
+    y: "top-[12%]",
+    arrow: "M0 0 C 0 40, -40 60, -40 120",
+    labelPos: "left-[78%] top-[12%]"
   },
   {
     name: "Abhishek Kumar",
     role: "Lead Web Developer",
     image: "https://res.cloudinary.com/abhisek-aur-backend/image/upload/v1769005111/WhatsApp_Image_2025-04-26_at_13.14.21_zpu6tv.jpg",
-    pos: "left-[82%]",
-    y: "top-[20%]",
+    pos: "left-[80%]",
+    y: "top-[22%]",
     arrow: "M0 0 C 0 40, -40 60, -40 120",
-    labelPos: "left-[85%] top-[10%]"
+    labelPos: "left-[94%] top-[2%]"
   }
+
 ];
 
 const testimonials = [
@@ -143,7 +153,7 @@ const Team = () => {
             </div>
           </div>
 
-          <div className="relative h-[600px] md:h-[700px] min-w-[1400px] md:w-full mt-20 md:mt-8">
+          <div className="relative h-[600px] md:h-[700px] min-w-[1240px] xl:min-w-full mt-20 md:mt-8">
             {team.map((member, idx) => (
               <div key={member.name} className={cn("absolute", member.pos, member.y)}>
                 {/* Member Label */}
@@ -164,7 +174,8 @@ const Team = () => {
                       idx === 0 && "rotate-[10deg]",
                       idx === 1 && "rotate-[-20deg] scale-x-[-1]",
                       idx === 3 && "rotate-[15deg] h-40",
-                      idx === 4 && "rotate-[-10deg] scale-x-[-1]"
+                      idx === 4 && "rotate-[-10deg] scale-x-[-1]",
+                      idx === 5 && "rotate-[5deg]"
                     )}
                   />
                 </motion.div>
@@ -177,7 +188,7 @@ const Team = () => {
                   className="relative group"
                 >
                   {/* Figure Image */}
-                  <div className="relative w-[280px] md:w-[320px] aspect-[3/4] overflow-hidden rounded-b-[4rem] group-hover:scale-105 transition-transform duration-500">
+                  <div className="relative w-[210px] md:w-[260px] aspect-[3/4] overflow-hidden rounded-b-[4rem] group-hover:scale-105 transition-transform duration-500">
                     <img
                       src={member.image}
                       alt={member.name}
