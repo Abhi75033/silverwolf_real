@@ -1,3 +1,4 @@
+import React from "react";
 import { motion } from "framer-motion";
 import { Quote, Star, MousePointer2, ArrowRight } from "lucide-react";
 import {
@@ -31,7 +32,7 @@ const team = [
   {
     name: "Sharad Yadav",
     role: "Chief Technology Officer",
-    image: "https://res.cloudinary.com/abhisek-aur-backend/image/upload/v1762188813/Screenshot_2025-11-03_at_10.17.39_PM_f4ycpx.png",
+    image: "https://res.cloudinary.com/abhisek-aur-backend/image/upload/v1770480772/WhatsApp_Image_2026-02-05_at_10.34.49_qxswwd.jpg",
     pos: "left-[35%]",
     y: "top-[8%]",
     arrow: "M10 0 C 10 60, 40 80, 40 150",
@@ -44,7 +45,7 @@ const team = [
     pos: "left-[50%]",
     y: "top-[25%]",
     arrow: "M100 0 C 100 50, 40 60, 40 130",
-    labelPos: "left-[68%] top-[5%]"
+    labelPos: "left-[55%] top-[10%]"
   },
   {
     name: "Aditya Raj",
@@ -53,7 +54,7 @@ const team = [
     pos: "left-[65%]",
     y: "top-[12%]",
     arrow: "M0 0 C 0 40, -40 60, -40 120",
-    labelPos: "left-[78%] top-[12%]"
+    labelPos: "left-[68%] top-[5%]"
   },
   {
     name: "Abhishek Kumar",
@@ -62,7 +63,7 @@ const team = [
     pos: "left-[80%]",
     y: "top-[22%]",
     arrow: "M0 0 C 0 40, -40 60, -40 120",
-    labelPos: "left-[94%] top-[2%]"
+    labelPos: "left-[82%] top-[5%]"
   }
 
 ];
@@ -155,9 +156,9 @@ const Team = () => {
 
           <div className="relative h-[600px] md:h-[700px] min-w-[1240px] xl:min-w-full mt-20 md:mt-8">
             {team.map((member, idx) => (
-              <div key={member.name} className={cn("absolute", member.pos, member.y)}>
-                {/* Member Identity Layer (Labels & Arrows) */}
-                <div className={cn("absolute whitespace-nowrap", idx % 2 === 0 ? "-top-20 -left-10" : "-top-24 -left-12")}>
+              <React.Fragment key={member.name}>
+                {/* Member Identity Layer (Labels & Arrows) - Positioned independently based on labelPos */}
+                <div className={cn("absolute whitespace-nowrap z-20", member.labelPos)}>
                   {/* Visual Arrow Layer (Background) */}
                   <div className="absolute inset-0 z-0 pointer-events-none">
                     <CurvedArrow
@@ -179,7 +180,7 @@ const Team = () => {
                     whileInView={{ opacity: 1, x: 0 }}
                     className="relative z-20"
                   >
-                    <div className="bg-white/5 backdrop-blur-md border border-white/10 p-4 rounded-2xl shadow-2xl hover:border-accent/30 transition-all group">
+                    <div className="bg-white/5 backdrop-blur-md border border-white/10 p-4 rounded-2xl shadow-2xl hover:border-accent/30 transition-all group cursor-pointer">
                       <p className="text-accent font-black text-xs uppercase tracking-widest mb-1 group-hover:scale-105 transition-transform">{member.name}</p>
                       <p className="text-white/40 text-[9px] font-bold uppercase tracking-wider">{member.role}</p>
                     </div>
@@ -187,26 +188,28 @@ const Team = () => {
                 </div>
 
                 {/* Member Figure */}
-                <motion.div
-                  initial={{ opacity: 0, y: 50 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ delay: idx * 0.1, type: "spring", stiffness: 100 }}
-                  className="relative z-10 group"
-                >
-                  {/* Figure Image */}
-                  <div className="relative w-[210px] md:w-[260px] aspect-[3/4] overflow-hidden rounded-b-[4rem] group-hover:scale-105 transition-transform duration-500">
-                    <img
-                      src={member.image}
-                      alt={member.name}
-                      className="w-full h-full object-cover grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-700 [mask-image:linear-gradient(to_bottom,black_70%,transparent_100%)]"
-                    />
-                  </div>
+                <div className={cn("absolute z-10", member.pos, member.y)}>
+                  <motion.div
+                    initial={{ opacity: 0, y: 50 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ delay: idx * 0.1, type: "spring", stiffness: 100 }}
+                    className="relative group"
+                  >
+                    {/* Figure Image */}
+                    <div className="relative w-[210px] md:w-[260px] aspect-[3/4] overflow-hidden rounded-b-[4rem] group-hover:scale-105 transition-transform duration-500">
+                      <img
+                        src={member.image}
+                        alt={member.name}
+                        className="w-full h-full object-cover grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-700 [mask-image:linear-gradient(to_bottom,black_70%,transparent_100%)]"
+                      />
+                    </div>
 
-                  {/* Stool/Platform Base */}
-                  <div className="absolute bottom-4 left-1/2 -translate-x-1/2 w-48 h-12 bg-white/5 rounded-[50%] blur-xl opacity-50 group-hover:bg-accent/20 transition-all" />
-                  <div className="absolute bottom-6 left-1/2 -translate-x-1/2 w-32 h-2 bg-gradient-to-r from-transparent via-white/20 to-transparent rounded-full opacity-30" />
-                </motion.div>
-              </div>
+                    {/* Stool/Platform Base */}
+                    <div className="absolute bottom-4 left-1/2 -translate-x-1/2 w-48 h-12 bg-white/5 rounded-[50%] blur-xl opacity-50 group-hover:bg-accent/20 transition-all" />
+                    <div className="absolute bottom-6 left-1/2 -translate-x-1/2 w-32 h-2 bg-gradient-to-r from-transparent via-white/20 to-transparent rounded-full opacity-30" />
+                  </motion.div>
+                </div>
+              </React.Fragment>
             ))}
           </div>
         </div>
