@@ -36,8 +36,9 @@ const SERVICES_DATA: Record<string, any> = {
         name: "Rushabh Pandey",
         role: "Finance Expert & Tax Consultant",
         bio: "Specializing in income tax filing, GST registration, financial strategies, and comprehensive business compliance.",
-        image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop",
-        mail: "rushabh@silverwolftechnologies.in"
+        image: "https://res.cloudinary.com/abhisek-aur-backend/image/upload/v1770262434/WhatsApp_Image_2026-02-05_at_08.08.58_1_cxf5xf.jpg",
+        mail: "rushabh@silverwolftechnologies.in",
+        imgPos: "top"
       }
     ],
     technologies: ["Financial Modeling", "QuickBooks", "SAP", "Advanced Excel"],
@@ -62,8 +63,9 @@ const SERVICES_DATA: Record<string, any> = {
         name: "Rushabh Pandey",
         role: "Finance Expert & Tax Consultant",
         bio: "Specializing in income tax filing, GST registration, financial strategies, and comprehensive business compliance.",
-        image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop",
-        mail: "rushabh@silverwolftechnologies.in"
+        image: "https://res.cloudinary.com/abhisek-aur-backend/image/upload/v1770262434/WhatsApp_Image_2026-02-05_at_08.08.58_1_cxf5xf.jpg",
+        mail: "rushabh@silverwolftechnologies.in",
+        imgPos: "top"
       }
     ],
     technologies: ["Tax Compliance Tools", "GST Portal Integration", "Legal Documentation"],
@@ -88,21 +90,22 @@ const SERVICES_DATA: Record<string, any> = {
         name: "Sharad Yadav",
         role: "Full Stack Website Developer",
         bio: "Expert in building high-performance web applications using modern JavaScript frameworks.",
-        image: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=400&h=400&fit=crop",
-        mail: "sharad@silverwolftechnologies.in"
+        image: "https://res.cloudinary.com/abhisek-aur-backend/image/upload/v1770480772/WhatsApp_Image_2026-02-05_at_10.34.49_qxswwd.jpg",
+        mail: "sharad@silverwolftechnologies.in",
+        imgPos: "top"
       },
       {
         name: "Divakar prajapati",
         role: "Lead Creative Designer",
         bio: "Expert in high-end visual design and brand storytelling.",
-        image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=400&fit=crop",
+        image: "https://res.cloudinary.com/abhisek-aur-backend/image/upload/v1770262435/WhatsApp_Image_2026-02-05_at_08.08.57_rlqpo8.jpg",
         mail: "diwakar@silverwolftechnologies.in"
       },
       {
         name: "Abhishekh Yadav",
         role: "Full Stack Developer & Cloud Engineer",
         bio: "Specializing in scalable web architectures and AWS cloud infrastructure.",
-        image: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=400&h=400&fit=crop",
+        image: "https://res.cloudinary.com/abhisek-aur-backend/image/upload/v1769005111/WhatsApp_Image_2025-04-26_at_13.14.21_zpu6tv.jpg",
         mail: "abhishekyadav1112.21@gmail.com"
       }
     ],
@@ -128,7 +131,7 @@ const SERVICES_DATA: Record<string, any> = {
         name: "Swapnali More",
         role: "Android Developer & Backend Engineer",
         bio: "Specializing in high-performance Android applications and Java-based backend systems using Spring Boot.",
-        image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&h=400&fit=crop",
+        image: "https://res.cloudinary.com/abhisek-aur-backend/image/upload/v1770262434/WhatsApp_Image_2026-02-05_at_08.08.58_ntkmv6.jpg",
         mail: "swapnali@silverwolftechnologies.in"
       }
     ],
@@ -154,7 +157,7 @@ const SERVICES_DATA: Record<string, any> = {
         name: "Divakar prajapati",
         role: "Lead Creative Designer & Video Editor",
         bio: "Expert in high-end video editing and motion graphics for brand storytelling.",
-        image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=400&fit=crop",
+        image: "https://res.cloudinary.com/abhisek-aur-backend/image/upload/v1770262435/WhatsApp_Image_2026-02-05_at_08.08.57_rlqpo8.jpg",
         mail: "diwakar@silverwolftechnologies.in"
       }
     ],
@@ -180,7 +183,7 @@ const SERVICES_DATA: Record<string, any> = {
         name: "Divakar prajapati",
         role: "Lead Creative Designer & Video Editor",
         bio: "Expert in high-end visual design and brand storytelling.",
-        image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=400&fit=crop",
+        image: "https://res.cloudinary.com/abhisek-aur-backend/image/upload/v1770262435/WhatsApp_Image_2026-02-05_at_08.08.57_rlqpo8.jpg",
         mail: "diwakar@silverwolftechnologies.in"
       }
     ],
@@ -206,21 +209,22 @@ const SERVICES_DATA: Record<string, any> = {
         name: "Swapnali More",
         role: "Android Developer & Backend Engineer",
         bio: "Specializing in high-performance Android applications and Java-based backend systems using Spring Boot.",
-        image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&h=400&fit=crop",
+        image: "https://res.cloudinary.com/abhisek-aur-backend/image/upload/v1770262434/WhatsApp_Image_2026-02-05_at_08.08.58_ntkmv6.jpg",
         mail: "swapnali@silverwolftechnologies.in"
       },
       {
         name: "Sharad Yadav",
         role: "Full Stack Website Developer",
         bio: "Expert in building high-performance web applications using modern JavaScript frameworks.",
-        image: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=400&h=400&fit=crop",
-        mail: "sharad@silverwolftechnologies.in"
+        image: "https://res.cloudinary.com/abhisek-aur-backend/image/upload/v1770480772/WhatsApp_Image_2026-02-05_at_10.34.49_qxswwd.jpg",
+        mail: "sharad@silverwolftechnologies.in",
+        imgPos: "top"
       },
       {
         name: "Abhishekh Yadav",
         role: "Full Stack Developer & Cloud Engineer",
         bio: "Specializing in scalable web architectures and AWS cloud infrastructure.",
-        image: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=400&h=400&fit=crop",
+        image: "https://res.cloudinary.com/abhisek-aur-backend/image/upload/v1769005111/WhatsApp_Image_2025-04-26_at_13.14.21_zpu6tv.jpg",
         mail: "abhishekyadav1112.21@gmail.com"
       }
     ],
@@ -246,14 +250,14 @@ const SERVICES_DATA: Record<string, any> = {
         name: "Abhishekh Yadav",
         role: "Cloud & Database Architect",
         bio: "Specializing in distributed systems and high-throughput database architectures on AWS.",
-        image: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=400&h=400&fit=crop",
+        image: "https://res.cloudinary.com/abhisek-aur-backend/image/upload/v1769005111/WhatsApp_Image_2025-04-26_at_13.14.21_zpu6tv.jpg",
         mail: "abhishekyadav1112.21@gmail.com"
       },
       {
         name: "Swapnali More",
         role: "Backend System Engineer",
         bio: "Expert in database integration and complex query optimization for enterprise ERPs.",
-        image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&h=400&fit=crop",
+        image: "https://res.cloudinary.com/abhisek-aur-backend/image/upload/v1770262434/WhatsApp_Image_2026-02-05_at_08.08.58_ntkmv6.jpg",
         mail: "swapnali@silverwolftechnologies.in"
       }
     ],
@@ -279,14 +283,15 @@ const SERVICES_DATA: Record<string, any> = {
         name: "Sharad Yadav",
         role: "Systems Stability Lead",
         bio: "Expert in deep-level debugging and performance optimization of large-scale JavaScript/TypeScript applications.",
-        image: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=400&h=400&fit=crop",
-        mail: "sharad@silverwolftechnologies.in"
+        image: "https://res.cloudinary.com/abhisek-aur-backend/image/upload/v1770480772/WhatsApp_Image_2026-02-05_at_10.34.49_qxswwd.jpg",
+        mail: "sharad@silverwolftechnologies.in",
+        imgPos: "top"
       },
       {
         name: "Abhishekh Yadav",
         role: "Cloud Infrastructure Specialist",
         bio: "Specializing in identifying and fixing infra-level bottlenecks and security blindspots.",
-        image: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=400&h=400&fit=crop",
+        image: "https://res.cloudinary.com/abhisek-aur-backend/image/upload/v1769005111/WhatsApp_Image_2025-04-26_at_13.14.21_zpu6tv.jpg",
         mail: "abhishekyadav1112.21@gmail.com"
       }
     ],
@@ -539,7 +544,12 @@ const ServiceDetail = () => {
                     <div className="absolute top-0 right-0 w-32 h-32 bg-accent opacity-5 rounded-full -mr-16 -mt-16 blur-3xl group-hover:opacity-10 transition-opacity" />
                     <div className="flex items-center gap-5 md:gap-8">
                       <div className="relative">
-                        <img src={member.image} alt={member.name} className="w-14 h-14 md:w-24 md:h-24 rounded-xl md:rounded-[2rem] object-cover grayscale group-hover:grayscale-0 transition-all duration-700 border border-white/10 group-hover:border-accent shadow-glow" />
+                        <img
+                          src={member.image}
+                          alt={member.name}
+                          className="w-14 h-14 md:w-24 md:h-24 rounded-xl md:rounded-[2rem] object-cover grayscale group-hover:grayscale-0 transition-all duration-700 border border-white/10 group-hover:border-accent shadow-glow"
+                          style={{ objectPosition: member.imgPos || "center" }}
+                        />
                         <div className="absolute -bottom-1 -right-1 p-1 bg-accent text-black rounded-lg">
                           <User className="h-2.5 w-2.5 md:h-3 md:w-3" />
                         </div>
