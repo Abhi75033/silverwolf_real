@@ -1,11 +1,3 @@
-# Allow all search engines to crawl the site
 User-agent: *
 Allow: /
-Disallow: /api/
-Disallow: /*.json$
-
-# Sitemap location
-Sitemap: https://silverwolftechnologies.com/sitemap.xml
-
-# Crawl-delay for polite crawling
-Crawl-delay: 1
+Sitemap: https://silverwolf.tech/sitemap.xml

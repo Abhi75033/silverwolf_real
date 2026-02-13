@@ -19,8 +19,8 @@ export default {
 		},
 		extend: {
 			fontFamily: {
-				'orbitron': ['Orbitron', 'monospace'],
-				'inter': ['Inter', 'sans-serif'],
+				sans: ['Inter', 'sans-serif'],
+				heading: ['Poppins', 'sans-serif'],
 			},
 			colors: {
 				border: 'hsl(var(--border))',
@@ -56,24 +56,11 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
-				sidebar: {
-					DEFAULT: 'hsl(var(--sidebar-background))',
-					foreground: 'hsl(var(--sidebar-foreground))',
-					primary: 'hsl(var(--sidebar-primary))',
-					'primary-foreground': 'hsl(var(--sidebar-primary-foreground))',
-					accent: 'hsl(var(--sidebar-accent))',
-					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
-					border: 'hsl(var(--sidebar-border))',
-					ring: 'hsl(var(--sidebar-ring))'
-				},
 				wolf: {
-					blue: 'hsl(var(--wolf-blue))',
-					'blue-dark': 'hsl(var(--wolf-blue-dark))',
-					silver: 'hsl(var(--silver))',
-					'silver-light': 'hsl(var(--silver-light))',
-					'silver-dark': 'hsl(var(--silver-dark))',
-					purple: 'hsl(var(--tech-purple))',
-					green: 'hsl(var(--neon-green))'
+          neutral: '#0A0A0A', // Deep Black
+          purple: '#6C2BD9',  // Royal Purple
+          violet: '#7F3AF2',  // Lighter Purple
+          neon: '#A855F7',    // Neon Violet Accent
 				}
 			},
 			borderRadius: {
@@ -82,27 +69,33 @@ export default {
 				sm: 'calc(var(--radius) - 4px)'
 			},
 			keyframes: {
-				'accordion-down': {
-					from: {
-						height: '0'
-					},
-					to: {
-						height: 'var(--radix-accordion-content-height)'
-					}
+				"accordion-down": {
+					from: { height: "0" },
+					to: { height: "var(--radix-accordion-content-height)" },
 				},
-				'accordion-up': {
-					from: {
-						height: 'var(--radix-accordion-content-height)'
-					},
-					to: {
-						height: '0'
-					}
-				}
+				"accordion-up": {
+					from: { height: "var(--radix-accordion-content-height)" },
+					to: { height: "0" },
+				},
+        "fade-in-up": {
+          "0%": { opacity: "0", transform: "translateY(20px)" },
+          "100%": { opacity: "1", transform: "translateY(0)" },
+        },
+        "glow": {
+          "0%, 100%": { boxShadow: "0 0 20px rgba(127, 58, 242, 0.5)" },
+          "50%": { boxShadow: "0 0 40px rgba(127, 58, 242, 0.8)" },
+        }
 			},
 			animation: {
-				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
-			}
+				"accordion-down": "accordion-down 0.2s ease-out",
+				"accordion-up": "accordion-up 0.2s ease-out",
+        "fade-in-up": "fade-in-up 0.6s ease-out forwards",
+        "glow": "glow 2s ease-in-out infinite",
+			},
+      backgroundImage: {
+        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+        'hero-glow': 'conic-gradient(from 180deg at 50% 50%, #6C2BD9 0deg, #0A0A0A 180deg, #6C2BD9 360deg)',
+      }
 		}
 	},
 	plugins: [require("tailwindcss-animate")],
